@@ -1,47 +1,35 @@
 var SuperEightBall = React.createClass({
   getInitialState: function () {
-    return {
-      predictions: [],
-      buffer: "",
-      index: 0
-    };
+    return {buffer: ""};
   },
 
   componentWillMount: function () {
-    $(document).on("keyup", this.handleKeyUp);
+    $(document).on("keydown", this.handleKeyDown);
   },
 
   componentWillUnmount: function () {
-    $(document).off("keyup", this.handleKeyUp);
+    $(document).off("keydown", this.handleKeyDown);
+  },
+
+  componentDidMount: function () {
+    this.refs.input.getDOMNode().focus();
   },
 
   render: function () {
     return (
       <div id="super-eight-ball">
-        <em>{this.state.predictions[this.state.index]}</em>
+        <input ref="input" value={this.state.buffer} onChange={this.updateBuffer} />
       </div>
     );
   },
 
-  handleKeyUp: function (e) {
-    var index = this.state.index,
-        predictions = this.state.predictions,
-        buffer = this.state.buffer;
+  updateBuffer: function (e) {
+    this.setState({buffer: e.target.value});
+  },
 
-    if (e.keyCode === 40 && index < predictions.length - 1) { // Down arrow
-      this.setState({index: index + 1});
-    } else if (e.keyCode === 38 && index > 0) { // Up arrow
-      this.setState({index: index - 1});
-    } else if (e.keyCode === 13 && buffer) { // Return
-      predictions.push(buffer);
-      this.setState({
-        predictions: predictions,
-        buffer: "",
-        index: predictions.length - 1
-      });
-    } else if (e.keyCode >= 32 && e.keyCode <= 122) {
-      buffer += String.fromCharCode(e.keyCode);
-      this.setState({buffer: buffer});
+  handleKeyDown: function (e) {
+    if (e.keyCode === 13) { // Return
+      this.setState({buffer: ""});
     }
   }
 });
