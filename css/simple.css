@@ -19,6 +19,7 @@ em {
 input {
   background-color: black; 
   border: black;
+  border-bottom: 1px solid #222;
 }
 
 input:focus {
