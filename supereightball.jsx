@@ -29,6 +29,7 @@ var SuperEightBall = React.createClass({
 
   handleKeyDown: function (e) {
     if (e.keyCode === 13) { // Return
+      ball.setText(this.state.buffer);
       this.setState({buffer: ""});
     }
   }

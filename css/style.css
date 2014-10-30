@@ -129,3 +129,12 @@ body {
     text-decoration: none; }
     #console a:hover {
       color: #888; }
+
+input {
+  background-color: black; 
+  border: black;
+}
+
+input:focus {
+  outline: none;
+}

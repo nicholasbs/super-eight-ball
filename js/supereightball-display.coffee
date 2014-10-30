@@ -1,16 +1,6 @@
 $ ->
   ball.init()
 
-  buffer = ""
-
-  $("body").on("keydown", (e) ->
-    if e.keyCode == 13 # return
-      ball.setText(buffer)
-      buffer = ""
-    else
-      buffer += String.fromCharCode(e.keyCode)
-  )
-
 window.ball = {
   duration: 2200
   scaleVal: "scale(0.7)"
