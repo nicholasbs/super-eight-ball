@@ -17,9 +17,10 @@ em {
 }
 
 input {
+  display: block
+  width: 100%;
   background-color: black; 
   border: black;
-  border-bottom: 1px solid #222;
 }
 
 input:focus {

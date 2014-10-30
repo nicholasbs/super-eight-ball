@@ -18,8 +18,8 @@ var SuperEightBall = React.createClass({displayName: 'SuperEightBall',
   render: function () {
     return (
       React.createElement("div", {id: "super-eight-ball"}, 
-        React.createElement("em", null, this.state.display), 
-        React.createElement("input", {ref: "input", value: this.state.buffer, onChange: this.updateBuffer})
+        React.createElement("input", {ref: "input", value: this.state.buffer, onChange: this.updateBuffer}), 
+        React.createElement("em", null, this.state.display)
       )
     );
   },
