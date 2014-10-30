@@ -12,10 +12,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -150px;
-  margin-left: -150px;
-  width: 300px;
-  height: 300px;
+  margin-top: -300px;
+  margin-left: -300px;
+  width: 600px;
+  height: 600px;
   background: #070832;
   border-radius: 50%;
   box-shadow: 0 3px 7px rgba(255, 255, 255, 0.3);
@@ -28,9 +28,9 @@ body {
 .sway-wrapper,
 .floater-wrapper {
   position: absolute;
-  -webkit-transition: all 2000ms ease-in-out;
-  -moz-transition: all 2000ms ease-in-out;
-  transition: all 2000ms ease-in-out;
+  -webkit-transition: all 1000ms ease-in-out;
+  -moz-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -54,8 +54,8 @@ body {
     transition: none; }
 
 .floater {
-  margin-top: -73.5px;
-  margin-left: -78.75px;
+  margin-top: -147px;
+  margin-left: -157.5px;
   background: #0f126d;
   filter: blur(1px);
   transform: rotate(-120deg) skewX(-30deg) scale(1, 0.866); }
@@ -64,8 +64,8 @@ body {
     position: absolute;
     background-color: inherit; }
   .floater, .floater:before, .floater:after {
-    width: 105px;
-    height: 105px;
+    width: 210px;
+    height: 210px;
     border-top-right-radius: 10%; }
   .floater:before {
     transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%); }
@@ -74,15 +74,15 @@ body {
 
 .text {
   position: absolute;
-  width: 105px;
-  height: 105px;
-  top: -52.5px;
-  left: -52.5px;
+  width: 210px;
+  height: 210px;
+  top: -103px;
+  left: -103px;
   text-transform: uppercase;
   color: #5e63e9;
-  font-size: 18px;
-  line-height: 29px;
-  letter-spacing: 0.4px;
+  font-size: 36px;
+  line-height: 58px;
+  letter-spacing: 0.8px;
   font-family: helvetica;
   text-shadow: 0 -1px 2px black, 0 1px 1px rgba(255, 255, 255, 0.3);
   text-align: center;
@@ -96,12 +96,12 @@ body {
 .test-text-el {
   position: absolute;
   top: -999999px;
-  width: 105px;
+  width: 210px;
   text-transform: uppercase;
   color: #5e63e9;
-  font-size: 18px;
-  line-height: 29px;
-  letter-spacing: 0.4px;
+  font-size: 36px;
+  line-height: 58px;
+  letter-spacing: 0.8px;
   font-family: helvetica;
   text-shadow: 0 -1px 2px black, 0 1px 1px rgba(255, 255, 255, 0.3);
   text-align: center; }
