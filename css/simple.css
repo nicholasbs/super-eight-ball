@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+}
+
+em {
+  font-style: normal;
+  font-family: helvetica;
+  text-shadow: 0 -1px 2px black, 0 1px 1px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  width: 800px;
+  color: #5e63e9;
+  text-transform: uppercase;
+  height: 600px;
+  display: block;
+  margin: 0 auto;
+  font-size: 200px;
+}
+
+input {
+  background-color: black; 
+  border: black;
+}
+
+input:focus {
+  outline: none;
+}

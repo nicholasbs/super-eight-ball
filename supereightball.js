@@ -1,6 +1,6 @@
 var SuperEightBall = React.createClass({displayName: 'SuperEightBall',
   getInitialState: function () {
-    return {buffer: ""};
+    return {buffer: "", display: ""};
   },
 
   componentWillMount: function () {
@@ -18,6 +18,7 @@ var SuperEightBall = React.createClass({displayName: 'SuperEightBall',
   render: function () {
     return (
       React.createElement("div", {id: "super-eight-ball"}, 
+        React.createElement("em", null, this.state.display), 
         React.createElement("input", {ref: "input", value: this.state.buffer, onChange: this.updateBuffer})
       )
     );
@@ -29,8 +30,7 @@ var SuperEightBall = React.createClass({displayName: 'SuperEightBall',
 
   handleKeyDown: function (e) {
     if (e.keyCode === 13) { // Return
-      ball.setText(this.state.buffer);
-      this.setState({buffer: ""});
+      this.setState({display: this.state.buffer, buffer: ""});
     }
   }
 });
