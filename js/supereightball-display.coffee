@@ -1,9 +1,14 @@
 $ ->
   ball.init()
 
-  # test triggers
-  $("body").on("click", ".trigger-set-text", ->
-    ball.setText($(@).text())
+  buffer = ""
+
+  $("body").on("keydown", (e) ->
+    if e.keyCode == 13 # return
+      ball.setText(buffer)
+      buffer = ""
+    else
+      buffer += String.fromCharCode(e.keyCode)
   )
 
 window.ball = {
